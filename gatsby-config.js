@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `WebDev Bi-Weekly`,
-    description: `Website meta description...`,
+    description: `Website meta description bla bla bla...`,
     author: `@HeikoBosse`,
   },
   plugins: [
@@ -11,6 +11,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
+    // Google Fonts
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -33,17 +34,19 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
+    // Markdown
     `gatsby-transformer-remark`,
     {
       resolve: "gatsby-plugin-sass",
       options: {
         useResolveUrlLoader: {
           options: {
-            sourceMap: true, //default is false
+            sourceMap: true,
           },
         },
       },
     },
+    // Manifest
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -17,6 +17,7 @@ const Navbar = () => {
     }
   }
 
+  // React hook
   useEffect(() => {
     changeNav()
     window.addEventListener("scroll", changeNav)

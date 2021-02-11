@@ -7,12 +7,12 @@ const ImageGrid = () => {
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, 
-              name: {nin: ["background", "background2", "background3" "gatsby-icon", "profile", "programming"]}}) {
+              name: {nin: ["background", "background2", "background3" "gatsby-icon"]}}) {
         edges {
           node {
             base
             childImageSharp {
-              fluid(quality: 90, maxHeight: 600, maxWidth: 600) {
+              fluid(maxHeight: 600, maxWidth: 600) {
                 ...GatsbyImageSharpFluid
               }
             }
